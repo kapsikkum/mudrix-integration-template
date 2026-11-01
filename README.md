@@ -51,8 +51,10 @@ You need a GitHub account and Node 20 or newer.
 
    A widget is the only tier that runs code: the page is served live by your host and can change at any time. It
    can only do what the person approves from a fixed list, and only in the one room it is opened in:
-   `send.message`, `read.messages`, `read.room`, `upload.file` and `download.file`. See
-   [Writing a widget](docs/writing-a-widget.md) and the sample in [`examples/hello-widget`](examples/hello-widget).
+   `send.message`, `read.messages`, `read.room`, `upload.file` and `download.file`, plus up to 3 custom room event
+   types of its own that you list in `events`. See [Writing a widget](docs/writing-a-widget.md) and the samples in
+   [`examples/hello-widget`](examples/hello-widget) (sends a message) and
+   [`examples/file-share`](examples/file-share) (sends a file and a custom event).
    The whole file may be at most 256 KB, with at most 50 integrations.
 
 5. **Sign it:**
@@ -74,7 +76,7 @@ check in this repository shows a warning and passes; afterwards it fails if the 
 
 ## Try things locally
 
-`npm run dev` starts a mock API, a sample widget and a signed dev repository on ports 8787 to 8789, for use with a
+`npm run dev` starts a mock API, the sample widgets and a signed dev repository on ports 8787 to 8789, for use with a
 Mudrix development build. Details in [Writing a widget](docs/writing-a-widget.md#test-it-locally).
 
 ## Updating your integration

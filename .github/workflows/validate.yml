@@ -18,7 +18,7 @@ jobs:
       - name: Check that the repository is set up
         id: setup
         run: |
-          if grep -q "REPLACE_ME" repo.json; then
+          if grep -q '"key": *"REPLACE_ME' repo.json; then
             echo "::warning::run npm run init"
             echo "ready=false" >> "$GITHUB_OUTPUT"
           else
