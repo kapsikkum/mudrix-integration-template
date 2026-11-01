@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "name": "My integrations",
+  "key": "REPLACE_ME_RUN_npm_run_init",
+  "serial": 1,
+  "integrations": [
+    {
+      "id": "my-service",
+      "name": "My Service",
+      "description": "One or two sentences on what it does, shown before anyone installs it.",
+      "version": "1.0.0",
+      "permissions": {
+        "linkCards": [
+          {
+            "hosts": ["example.com"],
+            "pathPrefix": "/share/",
+            "title": "My Service share",
+            "subtitle": "Opens in your browser",
+            "buttonLabel": "Open"
+          }
+        ],
+        "composerActions": [
+          {
+            "id": "share",
+            "label": "Share",
+            "icon": "link",
+            "insert": "https://example.com/share/new?room={room}"
+          }
+        ]
+      }
+    }
+  ]
+}
